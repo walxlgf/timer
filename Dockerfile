@@ -1,13 +1,15 @@
 FROM node:9.4.0
 
-WORKDIR /usr/app
+ENV TIMER_HOME /timer
 
-COPY package*.json ./
+COPY package*.json ${TIMER_HOME}/
 
-RUN npm install -qy
+WORKDIR $TIMER_HOME
+
+RUN npm install
 
 COPY . .
 
 EXPOSE 3000
 
-# CMD ["npm", "start"]
+CMD ["npm", "start"]
