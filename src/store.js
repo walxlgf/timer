@@ -1,13 +1,20 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import { appId, serverURL, liveQueryServerURL } from './config'
+// import { appId, serverURL, liveQueryServerURL } from './config'
 import rootReducer from './reducers'
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-
 //初始化Parse
 import Parse from 'parse';
-Parse.initialize(appId);
-Parse.serverURL = serverURL;
+
+const {
+    APP_ID,
+    SERVER_URL
+  } = process.env;
+  
+
+
+Parse.initialize(APP_ID);
+Parse.serverURL = SERVER_URL;
 // Parse.liveQueryServerURL = liveQueryServerURL;
 
 const win = window;
