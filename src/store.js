@@ -6,15 +6,15 @@ import thunk from 'redux-thunk';
 //初始化Parse
 import Parse from 'parse';
 
-const {
-    APP_ID,
-    SERVER_URL
-  } = process.env;
+// const {
+//     APP_ID,
+//     SERVER_URL
+//   } = process.env;
   
 
 
-Parse.initialize(APP_ID);
-Parse.serverURL = SERVER_URL;
+Parse.initialize('timer');
+Parse.serverURL = 'http://111.230.188.125:1337/parse';
 // Parse.liveQueryServerURL = liveQueryServerURL;
 
 const win = window;
