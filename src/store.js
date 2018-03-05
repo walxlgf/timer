@@ -15,7 +15,7 @@ import Parse from 'parse';
 
 Parse.initialize('timer');
 Parse.serverURL = 'http://111.230.190.237:1337/parse';
-Parse.serverURL = 'ws://111.230.190.237:1337/parse';
+Parse.liveQueryServerURL = 'ws://111.230.190.237:1337/parse';
 
 // Parse.liveQueryServerURL = liveQueryServerURL;
 
