@@ -14,7 +14,9 @@ import Parse from 'parse';
 
 
 Parse.initialize('timer');
-Parse.serverURL = 'http://localhost:1337/parse';
+Parse.serverURL = 'http://172.16.255.13:1337/parse';
+Parse.serverURL = 'ws://172.16.255.13:1337/parse';
+
 // Parse.liveQueryServerURL = liveQueryServerURL;
 
 const win = window;
