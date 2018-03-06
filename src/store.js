@@ -16,7 +16,8 @@ import Parse from 'parse';
 Parse.initialize('timer');
 Parse.serverURL = 'http://111.230.190.237:1337/parse';
 Parse.liveQueryServerURL = 'ws://111.230.190.237:1337/parse';
-
+console.log(`store:process.env:${JSON.stringify(process.env)}`)
+console.log(`store:process.env:SERVER_URL:${JSON.stringify(process.env.SERVER_URL)}`)
 // Parse.liveQueryServerURL = liveQueryServerURL;
 
 const win = window;
